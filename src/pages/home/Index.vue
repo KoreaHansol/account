@@ -55,5 +55,28 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped leng="scss">
+ /* .list {
+   height: 100px;
+ }
+
+ .list .list-item {
+
+ }
+
+.list.hide {
+
+}
+
+.list {
+   height: 100px;
+
+   &.hide {
+
+   }
+
+   .list-item {
+
+   }
+ } */
 </style>
