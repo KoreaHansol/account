@@ -33,8 +33,8 @@
   </div>
 </template>
 <script>
-// import moment from 'moment'
 import { Datetime } from 'vue-datetime';
+import moment from 'moment'
 
 export default {
   name: 'Add',
@@ -52,7 +52,15 @@ export default {
   components: {
     datetime: Datetime
   },
+  // filters: {
+  //   parseDate(date) {
+  //     return moment(date).format('YYYY-MM-DD')
+  //   }
+  // },
   methods: {
+    parseDate(date) {
+      return moment(date).format('YYYY-MM-DD')
+    },
     checkForm() {
       this.validationErrors = [];
 
@@ -61,14 +69,16 @@ export default {
       !this.addAccountObj.expenditure && this.validationErrors.push('지출을 입력하세요.')
       !this.addAccountObj.income && this.validationErrors.push('수입을 입력하세요.')
 
-      !this.validationErrors.length && this.$store.commit('addAccountList', this.addAccountObj)
-      !this.validationErrors.length && this.$router.push({ name: 'AccountList'})
+      if(!this.validationErrors.length) {
+        this.addAccountObj.date = this.parseDate(this.addAccountObj.date)
+        this.$store.commit('addAccountList', this.addAccountObj)
+        this.$router.push({ name: 'AccountList'})
+      }
     }
   },
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 label {
     margin: 0 0 1em;
