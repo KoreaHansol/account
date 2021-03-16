@@ -1,16 +1,18 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <Header /> -->
+    <Header />
     <router-view />
   </div>
 </template>
 
 <script>
+import Header from "@/components/Header.vue"
 
 export default {
   name: 'App',
   components: {
+    Header,
   }
 }
 </script>

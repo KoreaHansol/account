@@ -2,8 +2,11 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
 import _ from 'lodash'
+import { Datetime } from 'vue-datetime'
+import 'vue-datetime/dist/vue-datetime.css'
 
 Vue.use(Vuex)
+Vue.use(Datetime)
 
 const store = new Vuex.Store({
     state: {

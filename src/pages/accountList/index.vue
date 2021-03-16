@@ -1,11 +1,16 @@
 <template>
   <div>
-      List
+      {{ accountList }}
   </div>
 </template>
 <script>
 export default {
   name: 'List',
+  computed: {
+    accountList() {
+      return this.$store.state.accountList
+    }
+  },
 }
 </script>
 

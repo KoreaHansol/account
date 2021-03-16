@@ -14,12 +14,12 @@ export default new Router({
             component:Home
         },
         {
-            path: "/AccountList",
+            path: "/accountList",
             name: "AccountList",
             component: AccountList
         },
         {
-            path: "/AccountAdd",
+            path: "/accountAdd",
             name: "AccountAdd",
             component: AccountAdd
         }
