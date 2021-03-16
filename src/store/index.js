@@ -12,10 +12,10 @@ const store = new Vuex.Store({
     },
     mutations: {
         sumAccount(state) {
-        state.sum = 2500
+            state.sum = 2500
         },
         addAccountList(state, data) {
-        state.accountList = _.concat(state.accountList, data)
+            state.accountList = _.concat(state.accountList, data)
         }
     }
 })

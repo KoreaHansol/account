@@ -6,9 +6,6 @@
 <script>
 export default {
   name: 'List',
-  props: {
-    msg: String
-  }
 }
 </script>
 
